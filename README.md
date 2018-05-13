@@ -16,7 +16,6 @@ I currently run CopperheadOS (https://copperhead.co/android/) on my phone, which
 ## Config File
 Create a file named config.toml and fill in the details from initial setup above.
 
-    ```sh
     [telegram]
     user = 123456789 
     token = "323456789:ABCDE_fB19OHQZUF3FPPPF43PTEEB"
@@ -28,7 +27,6 @@ Create a file named config.toml and fill in the details from initial setup above
     [[slack]]
     name = "workspace #2"
     token = "xoxp-xxxxxxx-xxxxxxxx-xxxxxxx-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-    ```
 
 ## Installation
 
@@ -38,24 +36,20 @@ The easiest way is to download a pre-built binary from the [GitHub Releases](htt
 ### Docker
 You can also just run it as a docker container.
 
-    ```sh
     docker run --restart=always -d -v $(pwd)/config.toml:/config.toml vdan/slack-to-telegram:latest
-    ```
 
 ## Usage
-    ```sh
+
     ./slack-to-telegram --config config.toml
-    ```
 
 ## FAQ
 1. <b>Should I use slack-to-telegram?</b> That's up to you. Use at your own risk.
 
 ## Powered by
-* Slack API ([nlopes/slack]("https://github.com/nlopes/slack"))
-* Telegram Bot API ([telegram-bot-api.v4]("gopkg.in/telegram-bot-api.v4"))
-* TOML parser ([BurntSushi/toml]("https://github.com/BurntSushi/toml"))
+* Slack API ([nlopes/slack](https://github.com/nlopes/slack))
+* Telegram Bot API ([telegram-bot-api.v4](https://gopkg.in/telegram-bot-api.v4))
+* TOML parser ([BurntSushi/toml](https://github.com/BurntSushi/toml))
 
 ## Build From Source
-  ```sh
-  make tools && make
-  ```
+
+    make tools && make
